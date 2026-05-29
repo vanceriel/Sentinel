@@ -1,0 +1,54 @@
+================================================================================
+INCIDENT ANALYSIS REPORT
+================================================================================
+
+Analysis Date: 2026-01-29 14:19:38
+Log File: ../logs/brute_force_attack_20260129_141935.json
+Total Events: 66
+
+
+================================================================================
+IP ADDRESS ANALYSIS
+================================================================================
+
+Unique Source IPs: 2
+Unique Destination IPs: 2
+
+Top Source IPs:
+  106.80.137.147: 65 events
+  192.168.40.197: 1 events
+
+Top Destination IPs:
+  192.168.40.197: 65 events
+  106.80.137.147: 1 events
+
+================================================================================
+SEVERITY DISTRIBUTION
+================================================================================
+WARNING: 56 events
+CRITICAL: 7 events
+INFO: 3 events
+
+================================================================================
+ATTACK PATTERN ANALYSIS
+================================================================================
+
+[!] Failed Login Attempts: 56
+[!] Successful Logins: 1
+
+[!] Suspicious Commands Executed:
+  - 2026-01-29T13:27:35.278502Z: sudo su (Privilege escalation attempt)
+  - 2026-01-29T13:28:35.278502Z: cat /etc/passwd (Password file enumeration)
+  - 2026-01-29T13:29:35.278502Z: find / -name *.conf (Configuration file discovery)
+  - 2026-01-29T13:30:35.278502Z: netstat -an (Network connection enumeration)
+  - 2026-01-29T13:31:35.278502Z: ps aux (Process enumeration)
+
+[!] Data Exfiltration Detected:
+  - 2026-01-29T13:40:35.278502Z: 5242880 bytes - Unusual outbound data transfer detected
+
+================================================================================
+INDICATORS OF COMPROMISE (IOCs)
+================================================================================
+
+Suspicious IP Addresses:
+  - 106.80.137.147

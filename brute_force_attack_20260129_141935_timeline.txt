@@ -1,0 +1,461 @@
+================================================================================
+INCIDENT TIMELINE
+================================================================================
+
+Incident Type: Brute Force Attack
+
+Chronological Events:
+
+[1] 2026-01-29T12:19:35.278502Z
+    Action: SYN
+    Severity: INFO
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+
+[2] 2026-01-29T12:20:35.278502Z
+    Action: SYN
+    Severity: INFO
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+
+[3] 2026-01-29T12:21:35.278502Z
+    Action: SYN
+    Severity: INFO
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+
+[4] 2026-01-29T12:24:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[5] 2026-01-29T12:25:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[6] 2026-01-29T12:26:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[7] 2026-01-29T12:27:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[8] 2026-01-29T12:28:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[9] 2026-01-29T12:29:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[10] 2026-01-29T12:30:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[11] 2026-01-29T12:31:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[12] 2026-01-29T12:32:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[13] 2026-01-29T12:33:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[14] 2026-01-29T12:34:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[15] 2026-01-29T12:35:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[16] 2026-01-29T12:36:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[17] 2026-01-29T12:37:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[18] 2026-01-29T12:38:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[19] 2026-01-29T12:39:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[20] 2026-01-29T12:40:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[21] 2026-01-29T12:41:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[22] 2026-01-29T12:42:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[23] 2026-01-29T12:43:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[24] 2026-01-29T12:44:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[25] 2026-01-29T12:45:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[26] 2026-01-29T12:46:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[27] 2026-01-29T12:47:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[28] 2026-01-29T12:48:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[29] 2026-01-29T12:49:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[30] 2026-01-29T12:50:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[31] 2026-01-29T12:51:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[32] 2026-01-29T12:52:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[33] 2026-01-29T12:53:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[34] 2026-01-29T12:54:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[35] 2026-01-29T12:55:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[36] 2026-01-29T12:56:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[37] 2026-01-29T12:57:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[38] 2026-01-29T12:58:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[39] 2026-01-29T12:59:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[40] 2026-01-29T13:00:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[41] 2026-01-29T13:01:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[42] 2026-01-29T13:02:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[43] 2026-01-29T13:03:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[44] 2026-01-29T13:04:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[45] 2026-01-29T13:05:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[46] 2026-01-29T13:06:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[47] 2026-01-29T13:07:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[48] 2026-01-29T13:08:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[49] 2026-01-29T13:09:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[50] 2026-01-29T13:10:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[51] 2026-01-29T13:11:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[52] 2026-01-29T13:12:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[53] 2026-01-29T13:13:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[54] 2026-01-29T13:14:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[55] 2026-01-29T13:15:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[56] 2026-01-29T13:16:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[57] 2026-01-29T13:17:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[58] 2026-01-29T13:18:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[59] 2026-01-29T13:19:35.278502Z
+    Action: Failed login
+    Severity: WARNING
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[60] 2026-01-29T13:25:35.278502Z
+    Action: Successful login
+    Severity: CRITICAL
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+    Details: Accepted password for admin from 106.80.137.147 port 52891 ssh2
+
+[61] 2026-01-29T13:27:35.278502Z
+    Action: Privilege escalation attempt
+    Severity: CRITICAL
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+
+[62] 2026-01-29T13:28:35.278502Z
+    Action: Password file enumeration
+    Severity: CRITICAL
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+
+[63] 2026-01-29T13:29:35.278502Z
+    Action: Configuration file discovery
+    Severity: CRITICAL
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+
+[64] 2026-01-29T13:30:35.278502Z
+    Action: Network connection enumeration
+    Severity: CRITICAL
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+
+[65] 2026-01-29T13:31:35.278502Z
+    Action: Process enumeration
+    Severity: CRITICAL
+    Source: 106.80.137.147
+    Destination: 192.168.40.197
+
+[66] 2026-01-29T13:40:35.278502Z
+    Action: Large outbound transfer
+    Severity: CRITICAL
+    Source: 192.168.40.197
+    Destination: 106.80.137.147
+    Details: Unusual outbound data transfer detected
