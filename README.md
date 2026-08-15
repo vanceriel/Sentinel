@@ -22,14 +22,14 @@ Supports two scenarios: SSH brute-force attacks and malware infections with C2 b
 cd scripts
 
 # 1. Generate incident
-python3 incident_simulator.py
+python incident_simulator.py
 # Choose: 1 (Brute Force) or 2 (Malware)
 
 # 2. Analyze logs
-python3 log_analyzer.py ../logs/[filename].json
+python log_analyzer.py ../logs/[filename].json
 
 # 3. Generate report
-python3 report_generator.py ../logs/[filename].json
+python report_generator.py ../logs/[filename].json
 ```
 
 Output files appear in `../logs/` directory.
