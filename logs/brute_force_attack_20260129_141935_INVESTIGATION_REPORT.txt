@@ -1,0 +1,349 @@
+
+================================================================================
+INCIDENT INVESTIGATION REPORT
+================================================================================
+
+Report Generated: 2026-01-29 14:19:41
+Incident ID: INC-20260129-141941
+Classification: CONFIDENTIAL - FOR INTERNAL USE ONLY
+Prepared By: Security Operations Center (SOC)
+
+================================================================================
+
+
+EXECUTIVE SUMMARY
+================================================================================
+
+Incident Type: Security Incident
+Severity Level: CRITICAL
+Date of Incident: 2026-01-29
+Total Events Logged: 66
+
+INCIDENT OVERVIEW:
+This report documents a security incident that was detected and analyzed.
+The incident involved multiple attack phases and resulted in critical 
+severity findings requiring immediate attention and remediation.
+
+IMPACT ASSESSMENT:
+- Affected Systems: 2 system(s)
+- Attack Duration: From 2026-01-29T12:19:35.278502Z to 2026-01-29T13:40:35.278502Z
+- Data Potentially Compromised: ~5.00 MB potentially exfiltrated
+
+IMMEDIATE ACTIONS TAKEN:
+1. Incident containment initiated
+2. Affected systems isolated
+3. Comprehensive log analysis performed
+4. IOCs extracted for threat hunting
+5. Remediation plan developed
+
+
+
+DETAILED INCIDENT TIMELINE
+================================================================================
+
+The following timeline reconstructs the attack sequence based on log analysis:
+
+
+PHASE 1: RECONNAISSANCE & INITIAL ACCESS
+--------------------------------------------------------------------------------
+
+[2026-01-29T12:19:35.278502Z]
+  Action: SYN
+  Severity: INFO
+  Source: 106.80.137.147
+  Target: 192.168.40.197
+
+[2026-01-29T12:20:35.278502Z]
+  Action: SYN
+  Severity: INFO
+  Source: 106.80.137.147
+  Target: 192.168.40.197
+
+[2026-01-29T12:21:35.278502Z]
+  Action: SYN
+  Severity: INFO
+  Source: 106.80.137.147
+  Target: 192.168.40.197
+
+[2026-01-29T12:24:35.278502Z]
+  Action: Failed login
+  Severity: WARNING
+  Source: 106.80.137.147
+  Target: 192.168.40.197
+  Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+[2026-01-29T12:25:35.278502Z]
+  Action: Failed login
+  Severity: WARNING
+  Source: 106.80.137.147
+  Target: 192.168.40.197
+  Details: Failed password for admin from 106.80.137.147 port 52891 ssh2
+
+
+PHASE 2: PERSISTENCE & PRIVILEGE ESCALATION
+--------------------------------------------------------------------------------
+
+[2026-01-29T13:27:35.278502Z]
+  Action: Privilege escalation attempt
+  Severity: CRITICAL
+  Source: 106.80.137.147
+  Target: 192.168.40.197
+
+
+PHASE 3: LATERAL MOVEMENT & DISCOVERY
+--------------------------------------------------------------------------------
+
+[2026-01-29T13:29:35.278502Z]
+  Action: Configuration file discovery
+  Severity: CRITICAL
+  Source: 106.80.137.147
+  Target: 192.168.40.197
+
+
+PHASE 4: COLLECTION & EXFILTRATION
+--------------------------------------------------------------------------------
+
+[2026-01-29T13:40:35.278502Z]
+  Action: Large outbound transfer
+  Severity: CRITICAL
+  Source: 192.168.40.197
+  Target: 106.80.137.147
+  Details: Unusual outbound data transfer detected
+
+
+
+ROOT CAUSE ANALYSIS
+================================================================================
+
+INITIAL ACCESS VECTOR:
+Successful brute force attack via SSH from 106.80.137.147
+
+SECURITY CONTROL FAILURES:
+- No account lockout policy after multiple failed login attempts
+- Weak password policy allowed brute force success
+- Multi-factor authentication (MFA) not enforced
+
+VULNERABILITIES EXPLOITED:
+- Configuration weaknesses rather than specific CVEs
+
+ATTACK TECHNIQUES (MITRE ATT&CK):
+- T1110: Brute Force (Credential Access)
+- T1041: Exfiltration Over C2 Channel
+
+CONTRIBUTING FACTORS:
+1. Inadequate monitoring and alerting capabilities
+2. Delayed incident detection and response
+3. Insufficient access controls and authentication mechanisms
+4. Lack of network segmentation
+5. Missing or outdated security patches
+
+
+
+RECOMMENDED REMEDIATION
+================================================================================
+
+IMMEDIATE ACTIONS (0-24 Hours):
+========================================
+Priority: CRITICAL - Execute immediately
+
+1. CONTAINMENT:
+   □ Isolate all affected systems from the network
+   □ Block attacker IP addresses at perimeter firewall
+   □ Disable compromised user accounts
+   □ Terminate malicious processes identified in timeline
+   
+2. ERADICATION:
+   □ Remove malware files and persistence mechanisms
+   □ Reset all credentials on affected systems
+   □ Apply latest security patches
+   □ Verify system integrity using known-good backups
+   
+3. EVIDENCE PRESERVATION:
+   □ Create forensic images of affected systems
+   □ Preserve all logs for legal/compliance requirements
+   □ Document all actions taken during incident response
+
+SHORT-TERM ACTIONS (1-7 Days):
+========================================
+Priority: HIGH - Complete within one week
+
+1. SECURITY ENHANCEMENTS:
+   □ Deploy endpoint detection and response (EDR) solution
+   □ Implement network segmentation
+   □ Enable enhanced logging on all critical systems
+   □ Deploy SIEM for centralized log analysis
+   
+2. THREAT HUNTING:
+   □ Search for IOCs across entire network
+   □ Review historical logs for similar patterns
+   □ Check for additional compromised systems
+   □ Validate integrity of backups
+   
+3. CREDENTIAL MANAGEMENT:
+   □ Force password reset for all users
+   □ Implement multi-factor authentication (MFA)
+   □ Review and revoke unnecessary privileged access
+   □ Implement privileged access management (PAM)
+
+LONG-TERM ACTIONS (1-3 Months):
+========================================
+Priority: MEDIUM - Strategic improvements
+
+1. TECHNICAL CONTROLS:
+   □ Deploy advanced threat protection solutions
+   □ Implement application whitelisting
+   □ Enable PowerShell logging and script block logging
+   □ Deploy deception technology (honeypots)
+   □ Implement network access control (NAC)
+   
+2. PROCESS IMPROVEMENTS:
+   □ Develop/update incident response playbooks
+   □ Establish security operations center (SOC)
+   □ Implement security orchestration (SOAR)
+   □ Create detection use cases for observed TTPs
+   □ Establish threat intelligence program
+   
+3. PEOPLE & AWARENESS:
+   □ Conduct security awareness training (phishing, social engineering)
+   □ Perform tabletop exercises for incident response
+   □ Establish security champions program
+   □ Provide specialized training for IT/security teams
+
+4. GOVERNANCE:
+   □ Update security policies and procedures
+   □ Conduct third-party security assessment
+   □ Implement security metrics and KPIs
+   □ Establish vulnerability management program
+   □ Schedule regular penetration testing
+
+
+
+INDICATORS OF COMPROMISE (IOCs)
+================================================================================
+
+The following IOCs should be:
+- Blocked at network perimeter
+- Added to threat intelligence feeds
+- Used for retroactive threat hunting
+- Shared with security community (TLP:WHITE)
+
+
+IP ADDRESSES:
+  106.80.137.147 - Attacker infrastructure
+
+
+
+LESSONS LEARNED
+================================================================================
+
+KEY TAKEAWAYS:
+
+1. DETECTION GAPS:
+   - Lack of behavioral analytics delayed detection
+   - Insufficient log aggregation and correlation
+   - No real-time alerting for critical security events
+   
+2. RESPONSE DEFICIENCIES:
+   - Incident response plan not adequately tested
+   - Unclear escalation procedures
+   - Limited forensic capabilities
+   
+3. PREVENTIVE MEASURES:
+   - Basic security hygiene gaps (passwords, patching, MFA)
+   - Inadequate network segmentation
+   - Insufficient user awareness training
+
+RECOMMENDATIONS FOR FUTURE PREVENTION:
+
+TECHNICAL:
+- Implement zero-trust architecture
+- Deploy advanced threat detection (AI/ML-based)
+- Enhance endpoint visibility and control
+- Improve network segmentation
+- Implement just-in-time access
+
+OPERATIONAL:
+- Regular security assessments and penetration testing
+- Continuous security monitoring and threat hunting
+- Regular incident response drills and tabletops
+- Establish metrics for security operations effectiveness
+
+STRATEGIC:
+- Increase security budget allocation
+- Hire additional security personnel
+- Establish executive security steering committee
+- Implement security metrics dashboard for leadership
+
+
+================================================================================
+APPENDIX: TECHNICAL ANALYSIS
+================================================================================
+
+================================================================================
+INCIDENT ANALYSIS REPORT
+================================================================================
+
+Analysis Date: 2026-01-29 14:19:38
+Log File: ../logs/brute_force_attack_20260129_141935.json
+Total Events: 66
+
+
+================================================================================
+IP ADDRESS ANALYSIS
+================================================================================
+
+Unique Source IPs: 2
+Unique Destination IPs: 2
+
+Top Source IPs:
+  106.80.137.147: 65 events
+  192.168.40.197: 1 events
+
+Top Destination IPs:
+  192.168.40.197: 65 events
+  106.80.137.147: 1 events
+
+================================================================================
+SEVERITY DISTRIBUTION
+================================================================================
+WARNING: 56 events
+CRITICAL: 7 events
+INFO: 3 events
+
+================================================================================
+ATTACK PATTERN ANALYSIS
+================================================================================
+
+[!] Failed Login Attempts: 56
+[!] Successful Logins: 1
+
+[!] Suspicious Commands Executed:
+  - 2026-01-29T13:27:35.278502Z: sudo su (Privilege escalation attempt)
+  - 2026-01-29T13:28:35.278502Z: cat /etc/passwd (Password file enumeration)
+  - 2026-01-29T13:29:35.278502Z: find / -name *.conf (Configuration file discovery)
+  - 2026-01-29T13:30:35.278502Z: netstat -an (Network connection enumeration)
+  - 2026-01-29T13:31:35.278502Z: ps aux (Process enumeration)
+
+[!] Data Exfiltration Detected:
+  - 2026-01-29T13:40:35.278502Z: 5242880 bytes - Unusual outbound data transfer detected
+
+================================================================================
+INDICATORS OF COMPROMISE (IOCs)
+================================================================================
+
+Suspicious IP Addresses:
+  - 106.80.137.147
+
+================================================================================
+END OF REPORT
+================================================================================
+
+This report contains sensitive security information and should be handled 
+according to your organization's data classification policies.
+
+Distribution List:
+- Chief Information Security Officer (CISO)
+- IT Director
+- Security Operations Manager
+- Compliance Officer
+- Legal Department (if required)
