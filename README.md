@@ -20,6 +20,7 @@ Supports two scenarios: SSH brute-force attacks and malware infections with C2 b
 ## Quick Start
 
 ```bash
+# All files must be in the same folder
 cd [foldername]
 
 # Run everything at once
