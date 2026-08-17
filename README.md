@@ -1,4 +1,4 @@
-# SENTINEL - Incident Investigation Simulator
+# SENTINEL — Incident Investigation Simulator
 
 Simulates cybersecurity incidents and generates logs for hands-on incident response practice. Designed for SOC analysts and incident responders learning investigation workflows.
 
@@ -11,6 +11,7 @@ Simulates cybersecurity incidents and generates logs for hands-on incident respo
 | **incident_simulator.py** | Generate 60+ realistic security logs across 5 attack phases |
 | **log_analyzer.py** | Correlate events, extract IOCs, detect attack patterns |
 | **report_generator.py** | Create investigation reports with root cause & remediation |
+| **run.py** | Run all three scripts in sequence automatically |
 
 Supports two scenarios: SSH brute-force attacks and malware infections with C2 beaconing.
 
@@ -19,34 +20,59 @@ Supports two scenarios: SSH brute-force attacks and malware infections with C2 b
 ## Quick Start
 
 ```bash
-cd scripts
+cd [foldername]
 
-# 1. Generate incident
+# Run everything at once
+python run.py
+```
+
+Or run individually:
+
+```bash
+# 1. Generate incident logs
 python incident_simulator.py
 # Choose: 1 (Brute Force) or 2 (Malware)
 
 # 2. Analyze logs
-python log_analyzer.py ../logs/[filename].json
+python log_analyzer.py brute_force_attack_TIMESTAMP.json
 
 # 3. Generate report
-python report_generator.py ../logs/[filename].json
+python report_generator.py brute_force_attack_TIMESTAMP.json
 ```
 
-Output files appear in `../logs/` directory.
+Replace `TIMESTAMP` with the value generated in step 1 (e.g. `brute_force_attack_20260129_141935.json`).
+
+Output files are saved in the same folder.
 
 ---
 
 ## Project Structure
 
 ```
-incident-investigation-simulator/
-├── scripts/
-│   ├── incident_simulator.py    ← Generate incidents
-│   ├── log_analyzer.py          ← Analyze & investigate
-│   └── report_generator.py      ← Create reports
-├── logs/                        ← Generated output
+sentinel/
+├── incident_simulator.py    ← Generate incidents
+├── log_analyzer.py          ← Analyze & investigate
+├── report_generator.py      ← Create reports
+├── run.py                   ← Run all three at once
 └── README.md
 ```
+
+Output files generated after running:
+
+```
+sentinel/
+├── brute_force_attack_TIMESTAMP.json
+├── brute_force_attack_TIMESTAMP_timeline.txt
+├── brute_force_attack_TIMESTAMP_analysis.txt
+└── brute_force_attack_TIMESTAMP_INVESTIGATION_REPORT.txt
+```
+
+---
+
+## Requirements
+
+- Python 3.7+
+- No external dependencies (uses Python standard library only)
 
 ---
 
@@ -189,24 +215,10 @@ Each log entry contains:
 
 ---
 
-## Requirements
-
-- Python 3.7+
-- No external dependencies (uses Python standard library only)
-
-**Verify Installation:**
-```bash
-python3 --version  # Should show 3.7 or higher
-```
-
----
-
 ## Interactive Mode
 
-For deeper investigation:
-
 ```bash
-python3 log_analyzer.py ../logs/[filename].json --interactive
+python log_analyzer.py brute_force_attack_TIMESTAMP.json --interactive
 ```
 
 **Options:**
@@ -218,67 +230,29 @@ python3 log_analyzer.py ../logs/[filename].json --interactive
 
 ---
 
-## Key Skills Demonstrated
-
-✓ Log analysis & correlation  
-✓ Incident investigation & timeline reconstruction  
-✓ Attack pattern recognition  
-✓ MITRE ATT&CK framework mapping  
-✓ Root cause analysis  
-✓ Technical report writing  
-✓ IOC extraction & threat intelligence  
-✓ Remediation planning  
-✓ Python scripting & automation  
-
----
-
-## Example Commands
-
-```bash
-# Generate brute force scenario
-python3 incident_simulator.py
-# → Input: 1
-
-# Analyze with standard report
-python3 log_analyzer.py ../logs/brute_force_attack_*.json
-
-# Interactive investigation
-python3 log_analyzer.py ../logs/brute_force_attack_*.json --interactive
-
-# Create comprehensive report
-python3 report_generator.py ../logs/brute_force_attack_*.json
-
-# View results
-cat ../logs/brute_force_attack_*_timeline.txt
-cat ../logs/brute_force_attack_*_INVESTIGATION_REPORT.txt
-```
-
----
-
 ## Common Workflows
 
-**Quick Assessment:**
+**Quick run (recommended):**
 ```bash
-python3 incident_simulator.py
-python3 log_analyzer.py ../logs/*.json
+python run.py
 ```
 Time: ~5 minutes
 
-**Full Investigation:**
+**Full investigation with interactive mode:**
 ```bash
-python3 incident_simulator.py
-python3 log_analyzer.py ../logs/*.json --interactive
-python3 report_generator.py ../logs/*.json
+python incident_simulator.py
+python log_analyzer.py brute_force_attack_TIMESTAMP.json --interactive
+python report_generator.py brute_force_attack_TIMESTAMP.json
 ```
 Time: ~30 minutes
 
-**Both Scenarios:**
+**Both scenarios:**
 ```bash
-python3 incident_simulator.py
+python incident_simulator.py
 # Input: 3 (generates both)
-python3 log_analyzer.py ../logs/brute_force_attack_*.json
-python3 log_analyzer.py ../logs/malware_infection_*.json
-python3 report_generator.py ../logs/brute_force_attack_*.json
-python3 report_generator.py ../logs/malware_infection_*.json
+python log_analyzer.py brute_force_attack_TIMESTAMP.json
+python log_analyzer.py malware_infection_TIMESTAMP.json
+python report_generator.py brute_force_attack_TIMESTAMP.json
+python report_generator.py malware_infection_TIMESTAMP.json
 ```
 Time: ~45 minutes
