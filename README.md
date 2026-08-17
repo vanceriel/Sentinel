@@ -20,9 +20,6 @@ Supports two scenarios: SSH brute-force attacks and malware infections with C2 b
 ## Quick Start
 
 ```bash
-# All files must be in the same folder
-cd [foldername]
-
 # Run everything at once
 python run.py
 ```
@@ -35,15 +32,15 @@ python incident_simulator.py
 # Choose: 1 (Brute Force) or 2 (Malware)
 
 # 2. Analyze logs
-python log_analyzer.py brute_force_attack_TIMESTAMP.json
+python log_analyzer.py logs/brute_force_attack_TIMESTAMP.json
 
 # 3. Generate report
-python report_generator.py brute_force_attack_TIMESTAMP.json
+python report_generator.py logs/brute_force_attack_TIMESTAMP.json
 ```
 
 Replace `TIMESTAMP` with the value generated in step 1 (e.g. `brute_force_attack_20260129_141935.json`).
 
-Output files are saved in the same folder.
+Output files are saved in the logs/ folder.
 
 ---
 
@@ -55,17 +52,21 @@ sentinel/
 ├── log_analyzer.py          ← Analyze & investigate
 ├── report_generator.py      ← Create reports
 ├── run.py                   ← Run all three at once
-└── README.md
+├── .gitignore
+├── README.md
+└── logs/                    ← Output saved here (auto-created on first run)
+    └── .gitkeep
 ```
 
 Output files generated after running:
 
 ```
 sentinel/
-├── brute_force_attack_TIMESTAMP.json
-├── brute_force_attack_TIMESTAMP_timeline.txt
-├── brute_force_attack_TIMESTAMP_analysis.txt
-└── brute_force_attack_TIMESTAMP_INVESTIGATION_REPORT.txt
+└── logs/
+    ├── brute_force_attack_TIMESTAMP.json
+    ├── brute_force_attack_TIMESTAMP_timeline.txt
+    ├── brute_force_attack_TIMESTAMP_analysis.txt
+    └── brute_force_attack_TIMESTAMP_INVESTIGATION_REPORT.txt
 ```
 
 ---
@@ -219,7 +220,7 @@ Each log entry contains:
 ## Interactive Mode
 
 ```bash
-python log_analyzer.py brute_force_attack_TIMESTAMP.json --interactive
+python log_analyzer.py logs/brute_force_attack_TIMESTAMP.json --interactive
 ```
 
 **Options:**
@@ -242,8 +243,8 @@ Time: ~5 minutes
 **Full investigation with interactive mode:**
 ```bash
 python incident_simulator.py
-python log_analyzer.py brute_force_attack_TIMESTAMP.json --interactive
-python report_generator.py brute_force_attack_TIMESTAMP.json
+python log_analyzer.py logs/brute_force_attack_TIMESTAMP.json --interactive
+python report_generator.py logs/brute_force_attack_TIMESTAMP.json
 ```
 Time: ~30 minutes
 
@@ -251,9 +252,9 @@ Time: ~30 minutes
 ```bash
 python incident_simulator.py
 # Input: 3 (generates both)
-python log_analyzer.py brute_force_attack_TIMESTAMP.json
-python log_analyzer.py malware_infection_TIMESTAMP.json
-python report_generator.py brute_force_attack_TIMESTAMP.json
-python report_generator.py malware_infection_TIMESTAMP.json
+python log_analyzer.py logs/brute_force_attack_TIMESTAMP.json
+python log_analyzer.py logs/malware_infection_TIMESTAMP.json
+python report_generator.py logs/brute_force_attack_TIMESTAMP.json
+python report_generator.py logs/malware_infection_TIMESTAMP.json
 ```
 Time: ~45 minutes

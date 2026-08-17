@@ -12,7 +12,7 @@ import os
 from typing import List, Dict, Tuple
 
 class IncidentSimulator:
-    def __init__(self, output_dir: str = "."): #saves output in same folder as .py files
+    def __init__(self, output_dir: str = "logs"): #saves output in logs/ folder
         self.output_dir = output_dir
         self.incidents = []
         

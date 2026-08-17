@@ -489,7 +489,7 @@ def main():
     
     # Save report
     report_file = log_file.replace('.json', '_INVESTIGATION_REPORT.txt')
-    with open(report_file, 'w') as f:
+    with open(report_file, 'w', encoding='utf-8') as f:
         f.write(report)
     
     print(f"[+] Investigation report generated: {report_file}")
