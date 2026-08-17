@@ -22,6 +22,7 @@ Supports two scenarios: SSH brute-force attacks and malware infections with C2 b
 ```bash
 # Run everything at once
 python run.py
+# Choose: 1 (Brute Force) or 2 (Malware) or 3 (Both)
 ```
 
 Or run individually:
@@ -29,7 +30,7 @@ Or run individually:
 ```bash
 # 1. Generate incident logs
 python incident_simulator.py
-# Choose: 1 (Brute Force) or 2 (Malware)
+# Choose: 1 (Brute Force) or 2 (Malware) or 3 (Both)
 
 # 2. Analyze logs
 python log_analyzer.py logs/brute_force_attack_TIMESTAMP.json
