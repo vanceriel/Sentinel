@@ -1,2 +1,5 @@
-logs/*
+logs/*.json
+logs/*_analysis.txt
+logs/*_timeline.txt
+logs/*_INVESTIGATION_REPORT.txt
 !logs/.gitkeep
