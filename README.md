@@ -23,20 +23,25 @@ Supports two scenarios: SSH brute-force attacks and malware infections with C2 b
 # Run everything at once
 python run.py
 # Choose: 1 (Brute Force) or 2 (Malware) or 3 (Both)
+
 ```
 
-Or run individually:
+Or run individually (options 1 and 2 only):
 
 ```bash
 # 1. Generate incident logs
 python incident_simulator.py
-# Choose: 1 (Brute Force) or 2 (Malware) or 3 (Both)
+# Choose: 1 (Brute Force) or 2 (Malware)
 
 # 2. Analyze logs
 python log_analyzer.py logs/brute_force_attack_TIMESTAMP.json
+# or
+python log_analyzer.py logs/malware_infection_TIMESTAMP.json
 
 # 3. Generate report
 python report_generator.py logs/brute_force_attack_TIMESTAMP.json
+# or
+python report_generator.py logs/malware_infection_TIMESTAMP.json
 ```
 
 Replace `TIMESTAMP` with the value generated in step 1 (e.g. `brute_force_attack_20260129_141935.json`).

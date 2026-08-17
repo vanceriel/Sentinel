@@ -9,7 +9,17 @@ print("=" * 50)
 
 # Step 1: Run simulator (requires user input — type 1 or 2 or 3)
 print("\nStep 1: Generating incident logs...")
-subprocess.run([sys.executable, "incident_simulator.py"])
+#subprocess.run([sys.executable, "incident_simulator.py"])
+env = os.environ.copy()
+env["RUN_PY"] = "1"
+#subprocess.run([sys.executable, "incident_simulator.py"], env=env)
+try:
+    result = subprocess.run([sys.executable, "incident_simulator.py"], env=env)
+except KeyboardInterrupt:
+    #print("\n[!] Cancelled.")
+    sys.exit(0)
+if result.returncode != 0:
+    sys.exit(0)
 
 # Step 2: Find all newly generated .json log files
 json_files = glob.glob("logs/*.json")

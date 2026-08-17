@@ -8,6 +8,7 @@ import json
 import random
 import datetime
 import hashlib
+import sys
 import os
 from typing import List, Dict, Tuple
 
@@ -308,12 +309,38 @@ def main():
     
     simulator = IncidentSimulator()
     
+    '''
     print("\nSelect incident type to simulate:")
     print("1. Brute Force Attack")
     print("2. Malware Infection")
     print("3. Both")
     
     choice = input("\nEnter choice (1-3): ").strip()
+    '''
+
+if os.environ.get("RUN_PY"):
+    # Called from run.py — show all 3 options
+    print("\nSelect incident type to simulate:")
+    print("1. Brute Force Attack")
+    print("2. Malware Infection")
+    print("3. Both")
+    try:
+        choice = input("\nEnter choice (1-3): ").strip()
+    except KeyboardInterrupt:
+        print("\n[!] Cancelled.")
+        sys.exit(0)
+    if choice not in ["1", "2", "3"]:
+        print("[!] Invalid choice. Enter 1, 2, or 3.")
+        sys.exit(1)
+else:
+    # Called directly — show options 1 and 2 only
+    print("\nSelect incident type to simulate:")
+    print("1. Brute Force Attack")
+    print("2. Malware Infection")
+    choice = input("\nEnter choice (1-2): ").strip()
+    if choice not in ["1", "2"]:
+        print("[!] Invalid choice. Enter 1 or 2. For both scenarios, use run.py.")
+        sys.exit(1)
     
     incidents = []
     
