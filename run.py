@@ -28,4 +28,4 @@ subprocess.run([sys.executable, "log_analyzer.py", latest])
 print("\nStep 3: Generating report...")
 subprocess.run([sys.executable, "report_generator.py", latest])
 
-print("\n[✓] Done. Check the Sentinel folder for output files.")
+print("\n[✓] Done. Check the logs folder for output files.")
